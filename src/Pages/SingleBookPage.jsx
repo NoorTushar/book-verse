@@ -3,6 +3,8 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { getReadBooks, saveReadBooks } from "../Utils/localStorageReadBooks";
+import { saveWishlist } from "../Utils/localStorageWishList";
 
 const SingleBookPage = () => {
    const [readBook, setReadBook] = useState(false);
@@ -11,7 +13,6 @@ const SingleBookPage = () => {
    const { id } = useParams();
    const intId = parseInt(id);
    const books = useLoaderData();
-   // const [singleBook, setSingleBook] = useState({});
 
    const singleBook = books.find((book) => book.bookId === intId);
    const {
@@ -61,8 +62,11 @@ const SingleBookPage = () => {
             <div className="flex items-center gap-3 mt-4">
                <p className="font-bold">Tags </p>
                <div className="flex gap-3 flex-wrap">
-                  {tags.map((tag) => (
-                     <div className="bg-[#F5FCF3] text-our-primary text-base font-medium py-2 px-4 rounded-full">
+                  {tags.map((tag, idx) => (
+                     <div
+                        key={idx}
+                        className="bg-[#F5FCF3] text-our-primary text-base font-medium py-2 px-4 rounded-full"
+                     >
                         <p>#{tag}</p>
                      </div>
                   ))}
@@ -95,10 +99,18 @@ const SingleBookPage = () => {
 
             {/* buttons */}
             <div className="flex items-center gap-3 mt-6">
-               <button className="btn bg-transparent text-black border-black">
+               <button
+                  className="btn bg-transparent text-black border-black"
+                  onClick={() => {
+                     saveReadBooks(singleBook);
+                  }}
+               >
                   Read
                </button>
-               <button className="btn bg-our-cyan text-white hover:bg-cyan-600">
+               <button
+                  className="btn bg-our-cyan text-white hover:bg-cyan-600"
+                  onClick={() => saveWishlist(singleBook)}
+               >
                   Wishlist
                </button>
             </div>

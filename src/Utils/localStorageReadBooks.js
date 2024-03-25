@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 export const getReadBooks = () => {
    let readBooks = [];
    const storedReadBooks = localStorage.getItem("readBooks");
@@ -14,7 +16,7 @@ export const getReadBooks = () => {
 export const saveReadBooks = (readBook) => {
    let readBooks = getReadBooks();
 
-   const isExist = readBooks.find((b) => b.id === readBook.id);
+   const isExist = readBooks.find((b) => b.bookId === readBook.bookId);
 
    if (isExist) {
       return toast.error("Already read this book");
