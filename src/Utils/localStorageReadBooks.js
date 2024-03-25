@@ -19,10 +19,10 @@ export const saveReadBooks = (readBook) => {
    const isExist = readBooks.find((b) => b.bookId === readBook.bookId);
 
    if (isExist) {
-      return toast.error("Already read this book");
+      return toast.error("You have already read this book.");
    }
 
    readBooks.push(readBook);
    localStorage.setItem("readBooks", JSON.stringify(readBooks));
-   toast.success("Book Read Completed");
+   toast.success("Congratulations: You have completed reading this book.");
 };
