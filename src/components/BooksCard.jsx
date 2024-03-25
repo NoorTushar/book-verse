@@ -3,9 +3,9 @@ import Tags from "./Tags";
 import { FaRegStar } from "react-icons/fa6";
 
 const BooksCard = ({ book }) => {
-   const { id, bookName, image, tags, author, category } = book;
+   const { id, bookName, image, tags, author, category, rating } = book;
    return (
-      <div className="card border-2">
+      <div className="card border-2 cursor-pointer">
          <figure className="mt-6 px-6 py-6 rounded-xl mx-auto bg-[#F3F3F3]">
             <img
                src={image}
@@ -30,7 +30,7 @@ const BooksCard = ({ book }) => {
                   <p>{category}</p>
                </div>
                <div className="flex items-center gap-2">
-                  <p>5.00 </p>
+                  <p>{Number(rating).toFixed(1)}</p>
                   <FaRegStar className="font-bold text-lg"></FaRegStar>
                </div>
             </div>
