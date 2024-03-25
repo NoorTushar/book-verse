@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
    return (
@@ -6,18 +7,19 @@ const Banner = () => {
          <div className=" hero-content flex-col lg:flex-row-reverse lg:px-28 py-14">
             <div>
                <img
-                  src="https://i.ibb.co/pn7TcH0/The-Vinci-Code.png
-"
+                  src="https://i.ibb.co/YT9pWBR/The-Alchemist.png"
                   className=" max-w-[318px] rounded-lg  bg-transparent"
                />
             </div>
-            <div className="space-y-8 text-center lg:text-start">
-               <h1 className="text-4xl md:text-5xl font-bold">
+            <div className="text-center lg:text-start">
+               <h1 className="text-4xl md:text-5xl font-bold mb-8">
                   Books to freshen up your bookshelf
                </h1>
-               <button className="btn-lg font-bold rounded-xl bg-our-primary text-white">
-                  View The List
-               </button>
+               <Link to={"/listedBooks"}>
+                  <button className="btn btn-lg font-bold rounded-xl bg-our-primary text-white hover:bg-[#59c6d2]">
+                     View The List
+                  </button>
+               </Link>
             </div>
          </div>
       </div>
