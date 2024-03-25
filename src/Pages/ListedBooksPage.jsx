@@ -22,19 +22,16 @@ const ListedBooksPage = () => {
                </div>
                <ul
                   tabIndex={0}
-                  className="dropdown-content z-[1] menu p-2 shadow rounded-box w-52"
+                  className="dropdown-content z-[1] menu p-4 shadow rounded-box min-w-52 bg-white text-start text-base *:cursor-pointer space-y-2"
                >
-                  <li>
-                     <a>Item 1</a>
-                  </li>
-                  <li>
-                     <a>Item 2</a>
-                  </li>
+                  <li>Rating</li>
+                  <li>Number of pages</li>
+                  <li>Published year</li>
                </ul>
             </div>
          </div>
 
-         <Outlet numberr={numberr}></Outlet>
+         <Outlet></Outlet>
       </div>
    );
 };
