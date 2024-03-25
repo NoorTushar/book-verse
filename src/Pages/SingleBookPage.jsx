@@ -3,6 +3,9 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Tags from "../components/Tags";
 
 const SingleBookPage = () => {
+   const [readBook, setReadBook] = useState(false);
+   const [wishList, setWishlist] = useState(false);
+
    const { id } = useParams();
    const intId = parseInt(id);
    const books = useLoaderData();
@@ -22,6 +25,7 @@ const SingleBookPage = () => {
       publisher,
       yearOfPublishing,
    } = singleBook;
+
    return (
       <div className="space-y-8 lg:space-y-0 lg:flex lg:gap-12 mt-6 lg:mt-10 mb-24">
          {/* cover pic */}
