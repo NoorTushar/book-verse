@@ -24,9 +24,9 @@ const ReadBook = ({ readBook }) => {
       navigate(`/book/${bookId}`);
    };
    return (
-      <div className="border p-6 rounded-xl">
-         <div>
-            <img width={"200px"} src={image} alt={name} />
+      <div className="border p-6 md:p-10 lg:p-6 rounded-xl flex flex-col lg:flex-row gap-6 items-center lg:items-start">
+         <div className="size-[230px] lg:size-[300px] flex items-center justify-center bg-[#f3f3f3] rounded-2xl flex-shrink-0 ">
+            <img width={"130px"} src={image} alt={name} />
          </div>
 
          <div className="space-y-3">
