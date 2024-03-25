@@ -3,7 +3,7 @@ import Tags from "./Tags";
 import { FaRegStar } from "react-icons/fa6";
 
 const BooksCard = ({ book }) => {
-   const { id, bookName, image, tags, author } = book;
+   const { id, bookName, image, tags, author, category } = book;
    return (
       <div className="card border-2">
          <figure className="mt-6 px-6 py-6 rounded-xl mx-auto bg-[#F3F3F3]">
@@ -27,7 +27,7 @@ const BooksCard = ({ book }) => {
 
             <div className="w-full text-base opacity-80 font-medium flex justify-between">
                <div>
-                  <p>Fiction</p>
+                  <p>{category}</p>
                </div>
                <div className="flex items-center gap-2">
                   <p>5.00 </p>
