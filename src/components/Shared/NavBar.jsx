@@ -56,9 +56,9 @@ const NavBar = () => {
                </li>
             </ul>
          </div>
-         <div className="navbar-end space-x-2 text-white">
-            <button className="btn bg-our-primary">Sign In</button>
-            <button className="btn bg-our-cyan">Sing Up</button>
+         <div className="navbar-end space-x-2 ">
+            <button className="btn bg-our-primary text-white">Sign In</button>
+            <button className="btn bg-our-cyan text-white">Sing Up</button>
          </div>
       </div>
    );
