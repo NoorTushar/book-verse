@@ -5,6 +5,8 @@ import ListedBooksPage from "../Pages/ListedBooksPage";
 import PagesToReadPage from "../Pages/PagesToReadPage";
 import SingleBookPage from "../Pages/SingleBookPage";
 import ErrorPage from "../Pages/ErrorPage";
+import ReadBooks from "../components/ReadBooks";
+import WishlistBooks from "../components/wishlistbooks";
 
 export const router = createBrowserRouter([
    {
@@ -22,6 +24,16 @@ export const router = createBrowserRouter([
          {
             path: "/listedBooks",
             element: <ListedBooksPage></ListedBooksPage>,
+            children: [
+               {
+                  index: true,
+                  element: <ReadBooks></ReadBooks>,
+               },
+               {
+                  path: "wishlist",
+                  element: <WishlistBooks></WishlistBooks>,
+               },
+            ],
          },
          {
             path: "/pagesToRead",
