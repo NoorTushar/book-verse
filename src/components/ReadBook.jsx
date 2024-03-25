@@ -1,0 +1,102 @@
+import React from "react";
+import { SlCalender } from "react-icons/sl";
+import { IoPersonOutline } from "react-icons/io5";
+import { FaRegFileAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
+const ReadBook = ({ readBook }) => {
+   const navigate = useNavigate();
+   const {
+      bookId,
+      name,
+      author,
+      image,
+      review,
+      totalPages,
+      rating,
+      category,
+      tags,
+      publisher,
+      yearOfPublishing,
+   } = readBook;
+
+   const handleViewDetails = (bookId) => {
+      navigate(`/book/${bookId}`);
+   };
+   return (
+      <div className="border p-6 rounded-xl">
+         <div>
+            <img width={"200px"} src={image} alt={name} />
+         </div>
+
+         <div className="space-y-3">
+            <h2 style={{ lineHeight: "46px" }} className="text-2xl  font-bold">
+               {name}
+            </h2>
+            <p className="text-[20px]">by: {author}</p>
+            {/* tags & year */}
+            <div className="flex items-center gap-3 flex-wrap">
+               <p className="font-bold">Tags </p>
+               <div className="flex gap-4 flex-wrap items-center">
+                  {tags.map((tag, idx) => (
+                     <div
+                        key={idx}
+                        className="bg-[#F5FCF3] text-our-primary text-base font-medium py-2 px-4 rounded-full"
+                     >
+                        <p>#{tag}</p>
+                     </div>
+                  ))}
+                  <div className="flex gap-2 items-center">
+                     <SlCalender className="text-lg"></SlCalender>
+                     <p>
+                        <span className="font-bold">Published Year: </span>{" "}
+                        {yearOfPublishing}
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+            {/* publisher & page */}
+            <div className="flex gap-4 items-center flex-wrap py-2">
+               <div className="flex gap-2 items-center">
+                  <IoPersonOutline className="text-lg"></IoPersonOutline>
+                  <p>
+                     <span className="font-bold">Publisher: </span>
+                     {publisher}
+                  </p>
+               </div>
+               <div className="flex gap-2 items-center">
+                  <FaRegFileAlt className="text-lg"></FaRegFileAlt>
+                  <p>
+                     <span className="font-bold">Pages: </span>
+                     {totalPages}
+                  </p>
+               </div>
+            </div>
+
+            <div className="divider"></div>
+
+            <div className="flex items-center gap-3 flex-wrap">
+               <div className="bg-[#DFEDFF] text-blue-500 text-lg font-medium py-2 px-5 rounded-full">
+                  <p>Category: {category}</p>
+               </div>
+
+               <div className="bg-[#FFF4E0] text-yellow-600 text-lg font-medium py-2 px-5 rounded-full">
+                  <p>Category: {category}</p>
+               </div>
+
+               <div>
+                  <button
+                     className=" text-lg font-medium bg-our-primary text-white py-2 px-5 rounded-full"
+                     onClick={() => handleViewDetails(bookId)}
+                  >
+                     View Details
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+   );
+};
+
+export default ReadBook;

@@ -7,9 +7,6 @@ import { getReadBooks, saveReadBooks } from "../Utils/localStorageReadBooks";
 import { saveWishlist } from "../Utils/localStorageWishList";
 
 const SingleBookPage = () => {
-   const [readBook, setReadBook] = useState(false);
-   const [wishList, setWishlist] = useState(false);
-
    const { id } = useParams();
    const intId = parseInt(id);
    const books = useLoaderData();
