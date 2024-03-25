@@ -3,6 +3,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { Outlet } from "react-router-dom";
 
 const ListedBooksPage = () => {
+   const numberr = 2;
+
    return (
       <div>
          <h1 className="text-2xl lg:text-3xl rounded-lg py-5 font-bold text-center bg-[#F3F3F3]">
@@ -32,7 +34,7 @@ const ListedBooksPage = () => {
             </div>
          </div>
 
-         <Outlet></Outlet>
+         <Outlet numberr={numberr}></Outlet>
       </div>
    );
 };

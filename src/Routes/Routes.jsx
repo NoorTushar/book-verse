@@ -7,6 +7,7 @@ import SingleBookPage from "../Pages/SingleBookPage";
 import ErrorPage from "../Pages/ErrorPage";
 import ReadBooks from "../components/ReadBooks";
 import WishlistBooks from "../components/wishlistbooks";
+import { getReadBooks } from "../Utils/localStorageReadBooks";
 
 export const router = createBrowserRouter([
    {
@@ -15,7 +16,7 @@ export const router = createBrowserRouter([
       errorElement: <ErrorPage></ErrorPage>,
       children: [
          {
-            path: "/",
+            index: true,
             element: <Home></Home>,
             loader: () => {
                return fetch("../../public/Books.json");
@@ -28,6 +29,9 @@ export const router = createBrowserRouter([
                {
                   index: true,
                   element: <ReadBooks></ReadBooks>,
+                  loader: () => {
+                     return getReadBooks();
+                  },
                },
                {
                   path: "wishlist",

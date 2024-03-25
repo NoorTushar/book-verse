@@ -1,9 +1,17 @@
 import React from "react";
+import { getReadBooks } from "../Utils/localStorageReadBooks";
+import { useLoaderData } from "react-router-dom";
 
-const ReadBooks = () => {
+const ReadBooks = ({ numberr }) => {
+   const readBooks = useLoaderData();
+
+   console.log(readBooks);
+
    return (
       <div>
-         <h3>Read Books Section</h3>
+         {readBooks.map((readBook) => (
+            <h1>read Book</h1>
+         ))}
       </div>
    );
 };
