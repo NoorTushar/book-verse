@@ -1,0 +1,80 @@
+[
+   {
+      "bookId": 1,
+      "bookName": "The Girl with the Dragon Tattoo",
+      "author": "Stieg Larsson",
+      "image": "https://i.ibb.co/N3BQpZF/The-Girl-With-The-Dragon-Tattoo.png",
+      "review": "Stieg Larsson's masterpiece, 'The Girl with the Dragon Tattoo', is a riveting tale of suspense and intrigue that grabs hold of readers from the very first page. With its complex characters and intricate plot, this modern thriller is sure to leave you breathless.",
+      "totalPages": 672,
+      "rating": 4.4,
+      "category": "Mystery",
+      "tags": ["Suspense", "Thriller", "Crime"],
+      "publisher": "Norstedts Förlag",
+      "yearOfPublishing": 2005
+   },
+   {
+      "bookId": 2,
+      "bookName": "The Da Vinci Code",
+      "author": "Dan Brown",
+      "image": "https://i.ibb.co/pn7TcH0/The-Vinci-Code.png",
+      "review": "Dan Brown's 'The Da Vinci Code' is a captivating blend of art history and conspiracy theory. With its fast-paced narrative and thought-provoking themes, it's no wonder this novel has become a modern classic, captivating readers around the world.",
+      "totalPages": 454,
+      "rating": 4.0,
+      "category": "Thriller",
+      "tags": ["Conspiracy", "Religion", "Art"],
+      "publisher": "Doubleday",
+      "yearOfPublishing": 2003
+   },
+   {
+      "bookId": 3,
+      "bookName": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "image": "https://i.ibb.co/LnCpDRk/The-Hunger-Games.png",
+      "review": "Suzanne Collins' 'The Hunger Games' is a gripping dystopian adventure that explores themes of survival, sacrifice, and rebellion. With its compelling characters and heart-stopping action, this novel will keep you on the edge of your seat until the very end.",
+      "totalPages": 374,
+      "rating": 4.3,
+      "category": "Young Adult",
+      "tags": ["Dystopian", "Adventure", "Survival"],
+      "publisher": "Scholastic Press",
+      "yearOfPublishing": 2008
+   },
+   {
+      "bookId": 4,
+      "bookName": "The Kite Runner",
+      "author": "Khaled Hosseini",
+      "image": "https://i.ibb.co/MsJCvXr/Kite-Runner.png",
+      "review": "Khaled Hosseini's 'The Kite Runner' is a poignant tale of friendship, betrayal, and redemption set against the backdrop of Afghanistan's turbulent history. Through vivid storytelling and richly drawn characters, Hosseini paints a powerful portrait of love and loss.",
+      "totalPages": 371,
+      "rating": 4.3,
+      "category": "Fiction",
+      "tags": ["Historical", "Drama", "Friendship"],
+      "publisher": "Riverhead Books",
+      "yearOfPublishing": 2003
+   },
+   {
+      "bookId": 5,
+      "bookName": "The Alchemist",
+      "author": "Paulo Coelho",
+      "image": "https://i.ibb.co/YT9pWBR/The-Alchemist.png",
+      "review": "Paulo Coelho's 'The Alchemist' is a timeless allegory that inspires readers to pursue their dreams and listen to their hearts. With its lyrical prose and profound insights, this enchanting fable reminds us of the transformative power of following our own personal legends.",
+      "totalPages": 197,
+      "rating": 4.2,
+      "category": "Fiction",
+      "tags": ["Philosophical", "Adventure", "Spirituality"],
+      "publisher": "HarperCollins",
+      "yearOfPublishing": 1988
+   },
+   {
+      "bookId": 6,
+      "bookName": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "image": "https://i.ibb.co/tPwyTYX/Harry-Potter.png",
+      "review": "J.K. Rowling's 'Harry Potter and the Sorcerer's Stone' is a magical journey into a world of wonder and enchantment. With its endearing characters and imaginative storytelling, this beloved tale has captured the hearts of readers young and old alike.",
+      "totalPages": 309,
+      "rating": 4.7,
+      "category": "Fantasy",
+      "tags": ["Magic", "Friendship", "Adventure"],
+      "publisher": "Bloomsbury Publishing",
+      "yearOfPublishing": 1997
+   }
+]
