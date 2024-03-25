@@ -11,6 +11,7 @@ const Banner = () => {
          <div className=" hero-content flex-col lg:flex-row-reverse lg:px-28 py-14">
             <div>
                <img
+                  alt="The-Alchemist"
                   src="https://i.ibb.co/YT9pWBR/The-Alchemist.png"
                   className=" max-w-[318px] rounded-lg  bg-transparent"
                />
