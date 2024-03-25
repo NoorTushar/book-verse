@@ -1,9 +1,15 @@
 import React from "react";
+import BooksCard from "./BooksCard";
 
-const BooksListContainer = () => {
+const BooksListContainer = ({ books }) => {
    return (
-      <div>
-         <h3>Books List Container</h3>
+      <div className="my-[100px] text-[40px] font-bold text-center">
+         <h3 className="mb-[36px]">Books</h3>
+         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {books.map((book) => (
+               <BooksCard book={book}></BooksCard>
+            ))}
+         </div>
       </div>
    );
 };
