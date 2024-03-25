@@ -1,7 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Banner = () => {
+   const navigate = useNavigate();
+   const handleViewList = () => {
+      navigate("/listedBooks");
+   };
    return (
       <div className="hero min-h-[554px]  bg-[#F3F3F3] rounded-2xl mt-2">
          <div className=" hero-content flex-col lg:flex-row-reverse lg:px-28 py-14">
@@ -15,11 +19,13 @@ const Banner = () => {
                <h1 className="text-4xl md:text-5xl font-bold mb-8">
                   Books to freshen up your bookshelf
                </h1>
-               <Link to={"/listedBooks"}>
-                  <button className="btn btn-lg font-bold rounded-xl bg-our-primary text-white hover:bg-[#59c6d2]">
-                     View The List
-                  </button>
-               </Link>
+
+               <button
+                  className="btn btn-lg font-bold rounded-xl bg-our-primary text-white hover:bg-[#59c6d2]"
+                  onClick={handleViewList}
+               >
+                  View The List
+               </button>
             </div>
          </div>
       </div>
