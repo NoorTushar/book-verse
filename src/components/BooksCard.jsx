@@ -1,11 +1,12 @@
 import React from "react";
 import Tags from "./Tags";
 import { FaRegStar } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const BooksCard = ({ book }) => {
-   const { id, bookName, image, tags, author, category, rating } = book;
+   const { bookId, name, image, tags, author, category, rating } = book;
    return (
-      <div className="card border-2 cursor-pointer">
+      <Link to={`/book/${bookId}`} className="card border-2 cursor-pointer">
          <figure className="mt-6 px-6 py-6 rounded-xl mx-auto bg-[#F3F3F3]">
             <img
                src={image}
@@ -20,7 +21,7 @@ const BooksCard = ({ book }) => {
                   <Tags tag={tag}></Tags>
                ))}
             </div>
-            <h2 className="card-title text-2xl my-3">{bookName}</h2>
+            <h2 className="card-title text-2xl my-3">{name}</h2>
             <p className="text-base opacity-80 font-medium">by: {author}</p>
 
             <div className="divider"></div>
@@ -35,7 +36,7 @@ const BooksCard = ({ book }) => {
                </div>
             </div>
          </div>
-      </div>
+      </Link>
    );
 };
 

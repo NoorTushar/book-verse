@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
    return (
-      <Link
-         to={""}
-         className="hero min-h-[554px]  bg-[#F3F3F3] rounded-2xl mt-2"
-      >
+      <div className="hero min-h-[554px]  bg-[#F3F3F3] rounded-2xl mt-2">
          <div className=" hero-content flex-col lg:flex-row-reverse lg:px-28 py-14">
             <div>
                <img
@@ -25,7 +22,7 @@ const Banner = () => {
                </Link>
             </div>
          </div>
-      </Link>
+      </div>
    );
 };
 export default Banner;

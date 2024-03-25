@@ -13,6 +13,9 @@ export const router = createBrowserRouter([
          {
             path: "/",
             element: <Home></Home>,
+            loader: () => {
+               return fetch("../../public/Books.json");
+            },
          },
          {
             path: "/listedBooks",
@@ -25,6 +28,9 @@ export const router = createBrowserRouter([
          {
             path: "/book/:id",
             element: <SingleBookPage></SingleBookPage>,
+            loader: () => {
+               return fetch("../../public/Books.json");
+            },
          },
       ],
    },
