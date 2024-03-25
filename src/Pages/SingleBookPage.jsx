@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import Tags from "../components/Tags";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SingleBookPage = () => {
    const [readBook, setReadBook] = useState(false);
@@ -101,6 +103,7 @@ const SingleBookPage = () => {
                </button>
             </div>
          </div>
+         <ToastContainer></ToastContainer>
       </div>
    );
 };
