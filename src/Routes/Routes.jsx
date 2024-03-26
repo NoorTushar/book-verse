@@ -46,6 +46,9 @@ export const router = createBrowserRouter([
          {
             path: "/pagesToRead",
             element: <PagesToReadPage></PagesToReadPage>,
+            loader: () => {
+               return getReadBooks();
+            },
          },
          {
             path: "/book/:id",
