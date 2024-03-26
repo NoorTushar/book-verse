@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link, Outlet } from "react-router-dom";
+import { createContext } from "react";
+
+export const FilterOptionContext = createContext();
 
 const ListedBooksPage = () => {
    const [tabIndex, setTabIndex] = useState(0);
+   const [filterOption, setFilterOption] = useState("none");
 
    useEffect(() => {
       const localIndex = JSON.parse(localStorage.getItem("tabIndex"));
@@ -15,6 +19,10 @@ const ListedBooksPage = () => {
    const handleTabIndex = (index) => {
       setTabIndex(index);
       localStorage.setItem("tabIndex", JSON.stringify(index)); // Store the updated index
+   };
+
+   const handleSort = (filterText) => {
+      setFilterOption(filterText);
    };
 
    return (
@@ -36,9 +44,10 @@ const ListedBooksPage = () => {
                   tabIndex={0}
                   className="dropdown-content z-[1] menu p-4 shadow rounded-box min-w-52 bg-white text-start text-base *:cursor-pointer space-y-2"
                >
-                  <li>Rating</li>
-                  <li>Number of pages</li>
-                  <li>Published year</li>
+                  <li onClick={() => handleSort("none")}>None</li>
+                  <li onClick={() => handleSort("rating")}>Rating</li>
+                  <li onClick={() => handleSort("pages")}>Number of pages</li>
+                  <li onClick={() => handleSort("year")}>Published year</li>
                </ul>
             </div>
          </div>
@@ -48,7 +57,7 @@ const ListedBooksPage = () => {
                onClick={() => handleTabIndex(0)}
                to={`/listedBooks`}
                className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:border-gray-600 dark:text-gray-600 ${
-                  tabIndex == 0 ? "border border-b-0 rounded-t-lg" : "border-b"
+                  tabIndex === 0 ? "border border-b-0 rounded-t-lg" : "border-b"
                }`}
             >
                <span>Listed Books</span>
@@ -57,14 +66,17 @@ const ListedBooksPage = () => {
                onClick={() => handleTabIndex(1)}
                to={`/listedBooks/wishlist`}
                className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:border-gray-600 dark:text-gray-900 ${
-                  tabIndex == 1 ? "border border-b-0 rounded-t-lg" : "border-b"
+                  tabIndex === 1 ? "border border-b-0 rounded-t-lg" : "border-b"
                }`}
             >
                <span>Wishlist Books</span>
             </Link>
          </div>
 
-         <Outlet></Outlet>
+         {/* Providing message value to children components */}
+         <FilterOptionContext.Provider value={filterOption}>
+            <Outlet />
+         </FilterOptionContext.Provider>
       </div>
    );
 };

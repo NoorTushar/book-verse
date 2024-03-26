@@ -1,7 +1,7 @@
 import React from "react";
 import { SlCalender } from "react-icons/sl";
 import { IoPersonOutline } from "react-icons/io5";
-import { FaRegFileAlt } from "react-icons/fa";
+import { FaRegFileAlt, FaRegStar } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const ReadBook = ({ book }) => {
@@ -70,6 +70,13 @@ const ReadBook = ({ book }) => {
                   <p>
                      <span className="font-bold">Pages: </span>
                      {totalPages}
+                  </p>
+               </div>
+               <div className="flex gap-2 items-center">
+                  <FaRegStar className="text-lg"></FaRegStar>
+                  <p>
+                     <span className="font-bold">Rating: </span>
+                     {rating}
                   </p>
                </div>
             </div>
