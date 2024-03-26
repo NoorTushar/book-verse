@@ -6,7 +6,7 @@ const PagesToReadPage = () => {
    const books = useLoaderData();
    if (books.length === 0) {
       return (
-         <h1 className="text-2xl lg:text-3xl rounded-lg py-5 font-bold text-center bg-[#F3F3F3]">
+         <h1 className="text-2xl lg:text-3xl rounded-lg py-5 font-bold text-center bg-[#F3F3F3] mt-6">
             No Read Books
          </h1>
       );
