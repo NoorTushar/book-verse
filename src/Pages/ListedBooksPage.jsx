@@ -73,7 +73,6 @@ const ListedBooksPage = () => {
             </Link>
          </div>
 
-         {/* Providing message value to children components */}
          <FilterOptionContext.Provider value={filterOption}>
             <Outlet />
          </FilterOptionContext.Provider>
