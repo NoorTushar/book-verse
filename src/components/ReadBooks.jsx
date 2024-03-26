@@ -9,7 +9,7 @@ const ReadBooks = () => {
    return (
       <div className="space-y-6 my-10">
          {readBooks.map((book) => (
-            <ReadBook book={book}></ReadBook>
+            <ReadBook key={book.bookId} book={book}></ReadBook>
          ))}
       </div>
    );
