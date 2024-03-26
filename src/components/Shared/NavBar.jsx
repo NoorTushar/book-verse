@@ -41,8 +41,8 @@ const NavBar = () => {
                   </li>
                </ul>
             </div>
-            <Link to={`/`} className="text-2xl font-bold">
-               Book Shelf
+            <Link to={`/`} className="text-2xl md:text-3xl font-bold">
+               Book<span className="text-our-primary">Verse</span>
             </Link>
          </div>
          <div className="navbar-center hidden lg:flex">
