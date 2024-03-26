@@ -4,7 +4,7 @@ import { IoPersonOutline } from "react-icons/io5";
 import { FaRegFileAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-const ReadBook = ({ readBook }) => {
+const ReadBook = ({ book }) => {
    const navigate = useNavigate();
    const {
       bookId,
@@ -18,7 +18,7 @@ const ReadBook = ({ readBook }) => {
       tags,
       publisher,
       yearOfPublishing,
-   } = readBook;
+   } = book;
 
    const handleViewDetails = (bookId) => {
       navigate(`/book/${bookId}`);

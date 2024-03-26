@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const ListedBooksPage = () => {
-   const numberr = 2;
-
    return (
       <div>
          <h1 className="text-2xl lg:text-3xl rounded-lg py-5 font-bold text-center bg-[#F3F3F3]">
@@ -31,6 +29,21 @@ const ListedBooksPage = () => {
             </div>
          </div>
 
+         {/* Tabs */}
+         <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start pl-5 flex-nowrap dark:text-gray-800">
+            <Link
+               to={`/listedBooks`}
+               className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b dark:border-gray-600 dark:text-gray-600"
+            >
+               <span>Listed Books</span>
+            </Link>
+            <Link
+               to={`/listedBooks/wishlist`}
+               className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border border-b-0 rounded-t-lg dark:border-gray-600 dark:text-gray-900"
+            >
+               <span>Wishlist Books</span>
+            </Link>
+         </div>
          <Outlet></Outlet>
       </div>
    );

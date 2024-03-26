@@ -5,12 +5,11 @@ import ReadBook from "./ReadBook";
 
 const ReadBooks = () => {
    const readBooks = useLoaderData();
-   console.log(readBooks);
 
    return (
-      <div className="space-y-6">
-         {readBooks.map((readBook) => (
-            <ReadBook readBook={readBook}></ReadBook>
+      <div className="space-y-6 my-10">
+         {readBooks.map((book) => (
+            <ReadBook book={book}></ReadBook>
          ))}
       </div>
    );

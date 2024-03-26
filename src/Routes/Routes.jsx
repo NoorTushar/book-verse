@@ -6,8 +6,9 @@ import PagesToReadPage from "../Pages/PagesToReadPage";
 import SingleBookPage from "../Pages/SingleBookPage";
 import ErrorPage from "../Pages/ErrorPage";
 import ReadBooks from "../components/ReadBooks";
-import WishlistBooks from "../components/wishlistbooks";
+import WishlistBooks from "../components/WishlistBooks";
 import { getReadBooks } from "../Utils/localStorageReadBooks";
+import { getWishlist } from "../Utils/localStorageWishList";
 
 export const router = createBrowserRouter([
    {
@@ -36,6 +37,9 @@ export const router = createBrowserRouter([
                {
                   path: "wishlist",
                   element: <WishlistBooks></WishlistBooks>,
+                  loader: () => {
+                     return getWishlist();
+                  },
                },
             ],
          },
