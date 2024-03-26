@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
             index: true,
             element: <Home></Home>,
             loader: () => {
-               return fetch("../../public/Books.json");
+               return fetch("/Books.json");
             },
          },
          {
@@ -54,7 +54,7 @@ export const router = createBrowserRouter([
             path: "/book/:id",
             element: <SingleBookPage></SingleBookPage>,
             loader: () => {
-               return fetch("../../public/Books.json");
+               return fetch("/Books.json");
             },
          },
       ],
