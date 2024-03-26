@@ -38,7 +38,7 @@ const ListedBooksPage = () => {
                   role="button"
                   className="btn m-1 bg-our-primary text-white"
                >
-                  Filter by: {filterOption}
+                  Sort by: {filterOption}
                   <IoIosArrowDown></IoIosArrowDown>
                </div>
                <ul
