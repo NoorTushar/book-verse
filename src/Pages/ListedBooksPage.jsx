@@ -18,7 +18,7 @@ const ListedBooksPage = () => {
 
    const handleTabIndex = (index) => {
       setTabIndex(index);
-      localStorage.setItem("tabIndex", JSON.stringify(index)); // Store the updated index
+      localStorage.setItem("tabIndex", JSON.stringify(index));
    };
 
    const handleSort = (filterText) => {
