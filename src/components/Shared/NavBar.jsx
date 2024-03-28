@@ -56,6 +56,9 @@ const NavBar = () => {
                <li>
                   <NavLink to={"/pagesToRead"}>Pages to Read</NavLink>
                </li>
+               <li>
+                  <NavLink to={"/blogs"}>Blogs</NavLink>
+               </li>
             </ul>
          </div>
          <div className="navbar-end space-x-2 ">

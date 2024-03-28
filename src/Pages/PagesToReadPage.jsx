@@ -35,7 +35,7 @@ const PagesToReadPage = () => {
    };
 
    return (
-      <div className="min-h-[calc(100vh-84px)] flex items-center justify-center">
+      <div className="min-h-[calc(100vh-120px)] flex items-center justify-center bg-[#F8F8F8] rounded-lg">
          <BarChart
             className="-mt-7"
             width={books.length > 2 ? 1000 : 600}
