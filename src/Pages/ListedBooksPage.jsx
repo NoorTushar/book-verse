@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { createContext } from "react";
 
 export const FilterOptionContext = createContext();
@@ -8,6 +8,7 @@ export const FilterOptionContext = createContext();
 const ListedBooksPage = () => {
    const [tabIndex, setTabIndex] = useState(0);
    const [filterOption, setFilterOption] = useState("none");
+   const location = useLocation();
 
    useEffect(() => {
       const localIndex = JSON.parse(localStorage.getItem("tabIndex"));
@@ -15,6 +16,12 @@ const ListedBooksPage = () => {
          setTabIndex(localIndex);
       }
    }, []);
+
+   useEffect(() => {
+      const path = location.pathname;
+      const index = path.endsWith("/wishlist") ? 1 : 0;
+      setTabIndex(index);
+   }, [location]);
 
    const handleTabIndex = (index) => {
       setTabIndex(index);
@@ -39,11 +46,11 @@ const ListedBooksPage = () => {
                   className="btn m-1 bg-our-primary text-white"
                >
                   Sort by: {filterOption}
-                  <IoIosArrowDown></IoIosArrowDown>
+                  <IoIosArrowDown />
                </div>
                <ul
                   tabIndex={0}
-                  className="dropdown-content z-[1] menu p-4 shadow rounded-box min-w-52 bg-white text-start text-base *:cursor-pointer space-y-2"
+                  className="dropdown-content z-[1] menu p-4 shadow rounded-box min-w-52 bg-white text-start text-base cursor-pointer space-y-2"
                >
                   <li onClick={() => handleSort("none")}>None</li>
                   <li onClick={() => handleSort("rating")}>Rating</li>
