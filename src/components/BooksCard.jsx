@@ -16,15 +16,15 @@ const BooksCard = ({ book }) => {
             {/*  */}
          </figure>
          <div className="card-body items-center lg:items-start md:text-start text-center">
-            <div className="flex gap-3 flex-wrap">
+            <div className="flex gap-1 md:gap-3 flex-wrap">
                {tags.map((tag, idx) => (
                   <Tags key={idx} tag={tag}></Tags>
                ))}
             </div>
-            <h2 className="card-title text-2xl my-3">{name}</h2>
+            <h2 className="card-title text-2xl my-1 md:my-3">{name}</h2>
             <p className="text-base opacity-80 font-medium">by: {author}</p>
 
-            <div className="divider"></div>
+            <div className="divider my-1 md:my-3"></div>
 
             <div className="w-full text-base opacity-80 font-medium flex justify-between">
                <div>
