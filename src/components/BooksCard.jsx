@@ -11,7 +11,7 @@ const BooksCard = ({ book }) => {
             <img
                src={image}
                alt="Shoes"
-               className="rounded-xl max-w-[200px] sm:max-w-[250px] md:max-w-[200px] lg:max-w-auto"
+               className="rounded-xl max-w-[180px] sm:max-w-[250px] md:max-w-[200px] lg:max-w-auto"
             />
             {/*  */}
          </figure>
