@@ -13,7 +13,7 @@ const BlogsPage = () => {
          {/* Blogs Container */}
          <section className=" text-gray-100 my-6">
             <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12 px-0">
-               <div className="block max-w-sm gap-3 mx-auto sm:max-w-full group lg:grid lg:grid-cols-12 text-black">
+               <div className="block max-w-sm gap-3 mx-auto sm:max-w-full group lg:grid lg:grid-cols-12 text-black rounded-lg border">
                   <img
                      src={blogs[0].cover_pic}
                      alt=""

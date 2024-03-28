@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const BlogCard = ({ blog }) => {
    const { blogId, cover_pic, title, content, date, category } = blog;
    return (
-      <div className="max-w-sm mx-auto group text-black">
+      <div className="max-w-sm mx-auto group text-black rounded-lg border ">
          <img
             role="presentation"
             className="object-cover w-full rounded h-44 bg-gray-500"

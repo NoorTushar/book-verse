@@ -40,11 +40,14 @@ const NavBar = () => {
                      <NavLink to={"/pagesToRead"}>Pages to Read</NavLink>
                   </li>
                   <li>
+                     <NavLink to={"/authors"}>Spotlight</NavLink>
+                  </li>
+                  <li>
                      <NavLink to={"/blogs"}>Blogs</NavLink>
                   </li>
                </ul>
             </div>
-            <Link to={`/`} className="text-2xl md:text-3xl font-bold">
+            <Link to={`/`} className="text-xl md:text-3xl font-bold">
                Book<span className="text-our-primary">Verse</span>
             </Link>
          </div>
