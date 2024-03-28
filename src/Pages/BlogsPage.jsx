@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import BlogCard from "../components/BlogCard";
 
 const BlogsPage = () => {
@@ -30,9 +30,13 @@ const BlogsPage = () => {
                         {blogs[0].date}
                      </span>
                      <p>{blogs[0].content.slice(0, 170)} ...</p>
-                     <button className="btn bg-our-primary text-white hover:bg-green-600">
-                        Read More
-                     </button>
+                     <div>
+                        <Link to={`/blog/${blogs[0].blogId}`}>
+                           <button className="btn bg-our-primary text-white hover:bg-green-600">
+                              Read More
+                           </button>
+                        </Link>
+                     </div>
                   </div>
                </div>
 

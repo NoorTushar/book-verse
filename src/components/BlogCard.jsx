@@ -14,11 +14,13 @@ const BlogCard = ({ blog }) => {
             <h3 className="text-2xl font-semibold">{title}</h3>
             <span className="text-xs text-gray-400">{date}</span>
             <p>{content.slice(0, 170)} ...</p>
-            <Link to={`blog/${blogId}`}>
-               <button className="btn bg-our-primary text-white hover:bg-green-600">
-                  Read More
-               </button>
-            </Link>
+            <div>
+               <Link to={`/blog/${blogId}`}>
+                  <button className="btn bg-our-primary text-white hover:bg-green-600">
+                     Read More
+                  </button>
+               </Link>
+            </div>
          </div>
       </div>
    );

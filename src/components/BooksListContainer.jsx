@@ -7,7 +7,7 @@ const BooksListContainer = ({ books }) => {
          <h3 className="mb-[36px]">Books</h3>
          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {books.map((book) => (
-               <BooksCard book={book}></BooksCard>
+               <BooksCard key={book.bookId} book={book}></BooksCard>
             ))}
          </div>
       </div>
