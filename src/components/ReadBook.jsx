@@ -86,17 +86,17 @@ const ReadBook = ({ book }) => {
             <div className="divider"></div>
 
             <div className="flex items-center gap-3 flex-wrap">
-               <div className="bg-[#DFEDFF] text-blue-500 text-lg font-medium py-2 px-5 rounded-full">
+               <div className="bg-[#DFEDFF] text-blue-500 text-base font-medium py-2 md:py-3 px-5 md:px-6 rounded-full">
                   <p>Category: {category}</p>
                </div>
 
-               <div className="bg-[#FFF4E0] text-yellow-600 text-lg font-medium py-2 px-5 rounded-full">
+               <div className="bg-[#FFF4E0] text-yellow-600 text-base font-medium py-2 md:py-3 px-5 md:px-6 rounded-full">
                   <p>Category: {category}</p>
                </div>
 
                <div>
                   <button
-                     className=" text-lg font-medium bg-our-primary text-white py-2 px-5 rounded-full"
+                     className=" text-base font-medium bg-our-primary text-white py-2 md:py-3 px-5 md:px-6 rounded-full"
                      onClick={() => handleViewDetails(bookId)}
                   >
                      View Details

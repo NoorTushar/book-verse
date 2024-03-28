@@ -31,7 +31,7 @@ const ListedBooksPage = () => {
             Your Listed Books
          </h1>
          {/* sort by button */}
-         <div className="text-center mt-8">
+         <div className="text-center my-8">
             <div className="dropdown">
                <div
                   tabIndex={0}
