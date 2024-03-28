@@ -62,7 +62,7 @@ const NavBar = () => {
             </ul>
          </div>
          <div className="navbar-end space-x-2 ">
-            <button className="btn bg-our-primary text-white hover:bg-green-400">
+            <button className="btn bg-our-primary text-white hover:bg-green-600">
                Sign In
             </button>
             <button className="btn bg-our-cyan text-white hover:bg-cyan-600">

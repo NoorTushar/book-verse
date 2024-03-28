@@ -22,7 +22,7 @@ const Banner = () => {
                </h1>
 
                <button
-                  className="btn btn-lg font-bold rounded-xl bg-our-primary text-white hover:bg-[#59c6d2]"
+                  className="btn btn-lg font-bold rounded-xl bg-our-primary text-white hover:bg-green-600"
                   onClick={handleViewList}
                >
                   View The List
