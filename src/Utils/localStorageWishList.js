@@ -20,7 +20,9 @@ export const saveWishlist = (wishlist) => {
    const existInReadBook = readBooks.find((b) => b.bookId === wishlist.bookId);
 
    if (existInReadBook) {
-      return toast.error("You have already read this book.");
+      return toast.error(
+         "You cannot add to your wishlist as you have already read this book."
+      );
    }
    const isExist = wishlists.find((b) => b.bookId === wishlist.bookId);
 
