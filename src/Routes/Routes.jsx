@@ -11,6 +11,7 @@ import { getReadBooks } from "../Utils/localStorageReadBooks";
 import { getWishlist } from "../Utils/localStorageWishList";
 import BlogsPage from "../Pages/BlogsPage";
 import SingleBlogPage from "../Pages/SingleBlogPage";
+import AuthorsPage from "../Pages/AuthorsPage";
 
 export const router = createBrowserRouter([
    {
@@ -72,6 +73,13 @@ export const router = createBrowserRouter([
             element: <SingleBlogPage></SingleBlogPage>,
             loader: () => {
                return fetch("/Blogs.json");
+            },
+         },
+         {
+            path: "/authors",
+            element: <AuthorsPage></AuthorsPage>,
+            loader: () => {
+               return fetch("/Authors.json");
             },
          },
       ],

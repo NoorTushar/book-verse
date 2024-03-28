@@ -1,0 +1,77 @@
+[
+   {
+      "id": 1,
+      "name": "Stieg Larsson",
+      "date_of_birth": "August 15, 1954",
+      "education": "Studied at Stockholm University",
+      "biography": "Stieg Larsson (1954–2004) was a Swedish journalist and writer, best known for his 'Millennium' series of crime novels, which were published posthumously. Larsson's novels, which combine murder mystery, family saga, love story, and financial intrigue, have sold over 100 million copies worldwide. He was a leading expert on anti-democratic, right-wing extremist and Nazi organizations, and a fierce critic of capitalism and Swedish political and media establishment. Larsson died of a heart attack at the age of 50, before his novels gained international acclaim.",
+      "bibliography": [
+         "The Girl with the Dragon Tattoo",
+         "The Girl Who Played with Fire",
+         "The Girl Who Kicked the Hornets' Nest"
+      ]
+   },
+   {
+      "id": 2,
+      "name": "Dan Brown",
+      "date_of_birth": "June 22, 1964",
+      "education": "Studied at Amherst College",
+      "biography": "Dan Brown (born 1964) is an American author best known for his thriller novels, including the Robert Langdon series. His novels are known for their intricate plots, historical themes, and controversial theories. Brown's books have been translated into 57 languages and have sold over 200 million copies. Several of his novels have been adapted into films. Brown's work explores themes of religion, politics, and conspiracy theories.",
+      "bibliography": [
+         "The Da Vinci Code",
+         "Angels & Demons",
+         "The Lost Symbol",
+         "Inferno",
+         "Origin"
+      ]
+   },
+   {
+      "id": 3,
+      "name": "Suzanne Collins",
+      "date_of_birth": "August 10, 1962",
+      "education": "Studied theater arts at Indiana University",
+      "biography": "Suzanne Collins (born 1962) is an American author known for her dystopian young adult fiction series, 'The Hunger Games'. The series has been praised for its portrayal of themes such as government control, oppression, and rebellion. Collins has also worked as a television writer and was inspired to write 'The Hunger Games' while channel surfing between reality TV shows and coverage of the Iraq War. The series has sold over 100 million copies worldwide.",
+      "bibliography": ["The Hunger Games", "Catching Fire", "Mockingjay"]
+   },
+   {
+      "id": 4,
+      "name": "Khaled Hosseini",
+      "date_of_birth": "March 4, 1965",
+      "education": "Studied medicine at Santa Clara University",
+      "biography": "Khaled Hosseini (born 1965) is an Afghan-American novelist and physician. He is best known for his novels 'The Kite Runner', 'A Thousand Splendid Suns', and 'And the Mountains Echoed', all of which explore the experiences of Afghan characters. Hosseini's works have been praised for their emotional depth and portrayal of Afghan culture. He has also been involved in various humanitarian efforts in Afghanistan.",
+      "bibliography": [
+         "The Kite Runner",
+         "A Thousand Splendid Suns",
+         "And the Mountains Echoed"
+      ]
+   },
+   {
+      "id": 5,
+      "name": "Paulo Coelho",
+      "date_of_birth": "August 24, 1947",
+      "education": "Studied law but dropped out to pursue a career in writing",
+      "biography": "Paulo Coelho (born 1947) is a Brazilian author known for his philosophical and inspirational novels. His best-known work, 'The Alchemist', has been translated into over 80 languages and has sold over 65 million copies worldwide. Coelho's writing often explores themes of spirituality, destiny, and the journey of self-discovery. He has won numerous international awards for his work and is considered one of the most influential authors of our time.",
+      "bibliography": [
+         "The Alchemist",
+         "Brida",
+         "Eleven Minutes",
+         "The Valkyries",
+         "Veronika Decides to Die"
+      ]
+   },
+   {
+      "id": 6,
+      "name": "J.K. Rowling",
+      "date_of_birth": "July 31, 1965",
+      "education": "Studied French and the Classics at the University of Exeter",
+      "biography": "J.K. Rowling (born 1965) is a British author, philanthropist, film producer, television producer, and screenwriter. She is best known for writing the Harry Potter fantasy series, which has won multiple awards and sold more than 500 million copies, becoming the best-selling book series in history. The books are the basis of a popular film series, over which Rowling had overall approval on the scripts and was a producer on the final films. She has also written novels for adults, including 'The Casual Vacancy' and a series of crime novels under the pseudonym Robert Galbraith.",
+      "bibliography": [
+         "Harry Potter and the Philosopher's Stone",
+         "Harry Potter and the Chamber of Secrets",
+         "Harry Potter and the Prisoner of Azkaban",
+         "Harry Potter and the Goblet of Fire",
+         "Harry Potter and the Order of the Phoenix",
+         "Harry Potter and the Half-Blood Prince"
+      ]
+   }
+]

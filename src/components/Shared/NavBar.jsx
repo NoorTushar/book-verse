@@ -39,6 +39,9 @@ const NavBar = () => {
                   <li>
                      <NavLink to={"/pagesToRead"}>Pages to Read</NavLink>
                   </li>
+                  <li>
+                     <NavLink to={"/blogs"}>Blogs</NavLink>
+                  </li>
                </ul>
             </div>
             <Link to={`/`} className="text-2xl md:text-3xl font-bold">
@@ -46,7 +49,7 @@ const NavBar = () => {
             </Link>
          </div>
          <div className="navbar-center hidden lg:flex">
-            <ul className="our-menu menu-horizontal px-1 space-x-4">
+            <ul className="our-menu menu-horizontal px-1 space-x-1">
                <li>
                   <NavLink to={"/"}>Home</NavLink>
                </li>
@@ -55,6 +58,9 @@ const NavBar = () => {
                </li>
                <li>
                   <NavLink to={"/pagesToRead"}>Pages to Read</NavLink>
+               </li>
+               <li>
+                  <NavLink to={"/authors"}>Spotlight</NavLink>
                </li>
                <li>
                   <NavLink to={"/blogs"}>Blogs</NavLink>
