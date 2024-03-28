@@ -13,16 +13,16 @@ const Banner = () => {
                <img
                   alt="The-Alchemist"
                   src="https://i.ibb.co/YT9pWBR/The-Alchemist.png"
-                  className=" max-w-[318px] rounded-lg  bg-transparent"
+                  className=" max-w-[318px] w-[200px] md:w-auto rounded-lg  bg-transparent"
                />
             </div>
             <div className="text-center lg:text-start">
-               <h1 className="text-4xl md:text-5xl font-bold mb-8">
+               <h1 className="text-3xl md:text-5xl font-bold mb-8">
                   Books to freshen up your bookshelf
                </h1>
 
                <button
-                  className="btn btn-lg font-bold rounded-xl bg-our-primary text-white hover:bg-green-600"
+                  className="btn md:btn-lg font-bold rounded-xl bg-our-primary text-white hover:bg-green-600"
                   onClick={handleViewList}
                >
                   View The List

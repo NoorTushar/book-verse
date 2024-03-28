@@ -31,7 +31,7 @@ const SingleBookPage = () => {
          {/* cover pic */}
          <div className="bg-[#F3F3F3] rounded-xl flex items-center justify-center lg:basis-1/2 shadow-lg flex-shrink">
             <img
-               className="md:w-full w-[280px] p-6 lg:py-0 lg:px-6 max-w-[425px] flex-shrink py-14"
+               className="md:w-full w-[220px] p-6 lg:py-0 lg:px-6 max-w-[405px] flex-shrink py-14"
                src={image}
                alt=""
             />
