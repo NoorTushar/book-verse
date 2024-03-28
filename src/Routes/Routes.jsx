@@ -12,6 +12,7 @@ import { getWishlist } from "../Utils/localStorageWishList";
 import BlogsPage from "../Pages/BlogsPage";
 import SingleBlogPage from "../Pages/SingleBlogPage";
 import AuthorsPage from "../Pages/AuthorsPage";
+import SingleAuthorPage from "../Pages/SingleAuthorPage";
 
 export const router = createBrowserRouter([
    {
@@ -78,6 +79,13 @@ export const router = createBrowserRouter([
          {
             path: "/authors",
             element: <AuthorsPage></AuthorsPage>,
+            loader: () => {
+               return fetch("/Authors.json");
+            },
+         },
+         {
+            path: "/author/:authorId",
+            element: <SingleAuthorPage></SingleAuthorPage>,
             loader: () => {
                return fetch("/Authors.json");
             },

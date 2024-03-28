@@ -1,9 +1,10 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import AuthorCard from "../components/AuthorCard";
 
 const AuthorsPage = () => {
    const authors = useLoaderData();
+
    return (
       <div>
          <h1 className="text-2xl lg:text-3xl rounded-lg py-5 font-bold text-center bg-[#F3F3F3] mt-6">
