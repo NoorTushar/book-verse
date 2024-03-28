@@ -2,7 +2,7 @@ import React from "react";
 import { SlCalender } from "react-icons/sl";
 import { IoPersonOutline } from "react-icons/io5";
 import { FaRegFileAlt, FaRegStar } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const ReadBook = ({ book }) => {
    const navigate = useNavigate();
@@ -33,7 +33,9 @@ const ReadBook = ({ book }) => {
             <h2 style={{ lineHeight: "46px" }} className="text-2xl  font-bold">
                {name}
             </h2>
-            <p className="text-[20px]">by: {author}</p>
+            <Link to={`/author/${bookId}`} className="text-[20px] underline">
+               by: {author}
+            </Link>
             {/* tags & year */}
             <div className="flex items-center gap-3 flex-wrap">
                <p className="font-bold">Tags </p>

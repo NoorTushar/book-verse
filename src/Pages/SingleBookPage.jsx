@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -44,7 +44,12 @@ const SingleBookPage = () => {
             >
                {name}
             </h1>
-            <p className="text-[20px] font-medium mt-2">by: {author}</p>
+            <Link
+               to={`/author/${bookId}`}
+               className="text-[20px] font-medium mt-2 underline"
+            >
+               by: {author}
+            </Link>
 
             <div className="divider"></div>
             <p className="text-[20px] font-medium">{category}</p>
