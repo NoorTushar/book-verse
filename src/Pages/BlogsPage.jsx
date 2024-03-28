@@ -15,7 +15,7 @@ const BlogsPage = () => {
             <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12 px-0">
                <div className="block max-w-sm gap-3 mx-auto sm:max-w-full group lg:grid lg:grid-cols-12 text-black">
                   <img
-                     src="https://source.unsplash.com/random/480x360"
+                     src={blogs[0].cover_pic}
                      alt=""
                      className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 bg-gray-500 "
                   />
@@ -28,6 +28,9 @@ const BlogsPage = () => {
                      "
                      >
                         {blogs[0].date}
+                     </span>
+                     <span className="ml-4 text-xs text-gray-400">
+                        {blogs[0].category}
                      </span>
                      <p>{blogs[0].content.slice(0, 170)} ...</p>
                      <div>
