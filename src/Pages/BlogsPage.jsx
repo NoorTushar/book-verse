@@ -46,7 +46,7 @@ const BlogsPage = () => {
                <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {/* each blog card */}
 
-                  {blogs.map((blog) => {
+                  {blogs.slice(1, blogs.length).map((blog) => {
                      return <BlogCard key={blog.blogId} blog={blog}></BlogCard>;
                   })}
                </div>
